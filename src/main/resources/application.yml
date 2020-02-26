@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: zuul-proxy
+
+server:
+  port: 9008
+
+zuul:
+  routes:
+    feign-client:
+      path: /feign/**
+      url: http://localhost:9007/
